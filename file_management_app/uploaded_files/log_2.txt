@@ -1,0 +1,11 @@
+[2023-08-23T21:12:42.201Z] Found contact information for owners of 'spark-on-paasta_master': [ML Compute]
+[2023-08-23T21:12:42.313Z] POST-ing payload to https://github.yelpcorp.com/api/graphql: {"query":"    query(\n        $ownerName: String!,\n        $repoName: String!,\n        $objectExpression: String!,\n    ) {\n        repository(owner: $ownerName, name: $repoName) {\n            object(expression: $objectExpression) {\n                ... on Blob {\n                    text\n                }\n            }\n        }\n    }\n    ","variables":{"ownerName":"packages","repoName":"spark-on-paasta","objectExpression":"master:jenkins.yaml"}}
+[2023-08-23T21:12:42.620Z] Applying job overrides for platforms: [jammy]
+[2023-08-23T21:12:42.628Z] Overriding repoBranch to origin/master
+[2023-08-23T21:12:43.131Z] Ignoring sensuResult due to empty sensuTeams or no-op configuration
+[2023-08-23T21:12:43.264Z] POST-ing payload to https://github.yelpcorp.com/api/graphql: {"query":"    query(\n        $ownerName: String!,\n        $repoName: String!,\n        $objectExpression: String!,\n    ) {\n        repository(owner: $ownerName, name: $repoName) {\n            object(expression: $objectExpression) {\n                ... on Blob {\n                    text\n                }\n            }\n        }\n    }\n    ","variables":{"ownerName":"packages","repoName":"spark-on-paasta","objectExpression":"master:jenkins.yaml"}}
+[2023-08-23T21:12:43.563Z] Using new pod for host [os_release:bionic, min_cpu:0.5, min_memory:1, max_cpu:6, max_memory:6, container:[enabled:false], ownerRepo:packages/spark-on-paasta, repo:packages/spark-on-paasta] and docker image null
+[2023-08-23T21:12:43.625Z] creating pod with configuration osRelease: BIONIC, memoryRequest: 1000Mi, memoryLimit: 6000Mi, cpuRequest: 0.5, cpuLimit: 6.0, routableIp: false
+[2023-08-23T21:12:56.980Z] [METRIC] name="time_taken_to_acquire_executor", value=13416, jobName="spark-on-paasta_master", os_release="bionic", min_cpu="0.5", min_memory="1", max_cpu="6", max_memory="6", container="[enabled:false]", ownerRepo="packages/spark-on-paasta", repo="packages/spark-on-paasta"
+[2023-08-23T21:12:57.642Z] Now running on hostname: spark-on-paasta-master-845-c8l6t-98g0n-fv89n
+[2023-08-23T21:12:57.642Z] 

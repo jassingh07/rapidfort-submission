@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://apis.google.com;">
+    <title>File Upload</title>
+</head>
+<body>
+    <div class="container">
+	<!-- Form to upload the selected file -->
+        <h1>File Upload</h1>
+	<div class="upload-btn-wrapper">
+            <form id="upload-form" enctype="multipart/form-data" action = "/v1/upload" method = "POST">
+                    <input type="file" name="file" id="fileInput" accept=".txt,.pdf,.docx" />
+                    <button type="submit" value = "upload">Upload</button>
+            </form>
+        </div>
+
+    <div id="file-info"></div>
+	<!-- Form to list uploaded files -->
+	<form id="list-files-form" action="/v1/list_files" method="GET">
+            <button type="submit" id="list-files-btn">List Uploaded Files</button>
+        </form>
+	<!-- Table to display uploaded files -->
+        <h2>Uploaded Filessss:</h2>
+        <table id="file-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in uploaded_files %}
+                    <tr>
+                        <td>{{ file }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
