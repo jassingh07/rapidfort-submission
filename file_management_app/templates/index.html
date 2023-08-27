@@ -21,21 +21,6 @@
             <button type="submit" id="list-files-btn">List Uploaded Files</button>
         </form>
 	<!-- Table to display uploaded files -->
-        <h2>Uploaded Filessss:</h2>
-        <table id="file-table">
-            <thead>
-                <tr>
-                    <th>File Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for file in uploaded_files %}
-                    <tr>
-                        <td>{{ file }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
     </div>
 </body>
 </html>
