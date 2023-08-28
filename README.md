@@ -1,4 +1,3 @@
-```
 # File Management App
 
 This is a simple web application built using Flask that allows you to upload files and list uploaded files along with their information.
@@ -53,6 +52,5 @@ This is a simple web application built using Flask that allows you to upload fil
 - List Files: Should show output in tabular format on the Web-UI
 - Add Kubernetes manifest file
 
-```
 ## Issues
 Please open an issue on github.
